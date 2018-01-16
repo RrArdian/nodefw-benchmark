@@ -30,4 +30,4 @@ echo nestjs >> results-plain.txt ;
 cd nestjs ;
 node index.js & sleep 5 ;
 cd ..; 
-autocannon -c 1024 -t30 -j http://localhost:3030 >> results-plain.txt
+autocannon -c 1024 -t30 -j http://localhost:3000 >> results-plain.txt

@@ -30,4 +30,4 @@ echo nestjs >> results-pipeline.txt ;
 cd nestjs ;
 node index.js & sleep 5 ;
 cd ..; 
-autocannon -c 1024 -t30 -p 10 -j http://localhost:3030 >> results-pipeline.txt
+autocannon -c 1024 -t30 -p 10 -j http://localhost:3000 >> results-pipeline.txt
