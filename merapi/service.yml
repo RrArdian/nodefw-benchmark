@@ -1,0 +1,20 @@
+schema: kata.ai/schema/merapi/1.0
+
+plugins:
+    - express
+
+name: ${package.name}
+version: ${package.version}
+
+components:
+    controller: Controller
+    app:
+        type: express
+        config: appConfig
+
+appConfig:
+    port: 8080
+    routes:
+        GET /: controller.hello
+
+main: controller

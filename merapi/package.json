@@ -1,0 +1,19 @@
+{
+  "name": "merapi-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc | node start.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^3.9.1",
+    "merapi": "^0.18.2",
+    "merapi-plugin-express": "^0.3.7",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}
