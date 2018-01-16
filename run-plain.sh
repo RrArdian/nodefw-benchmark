@@ -1,13 +1,13 @@
 echo express >> results-plain.txt ;
-node expressserver.js &
+node express.js &
 autocannon -c 1024 -t30 -j http://localhost:8090 >> results-plain.txt
-pkill -f expressserver ;
+pkill -f express ;
 sleep 5
 
 echo node >> results-plain.txt ;
-node rawnodeserver.js & sleep 5 ; 
+node plainserver.js & sleep 5 ; 
 autocannon -c 1024 -t30 -j http://localhost:8000/ >> results-plain.txt
-pkill -f rawnodeserver ;
+pkill -f plainserver ;
 sleep 5
 
 echo merapi >> results-plain.txt ;

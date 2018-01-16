@@ -1,13 +1,13 @@
-echo express >> results-pipeline.txt ;
-node expressserver.js &
-autocannon -c 1024 -t30 -p 10 -j http://localhost:8090 >> results-pipeline.txt
-pkill -f expressserver ;
+echo express >> results-plain.txt ;
+node express.js &
+autocannon -c 1024 -t30 -p 10 -j http://localhost:8090 >> results-plain.txt
+pkill -f express ;
 sleep 5
 
-echo node >> results-pipeline.txt ;
-node rawnodeserver.js & sleep 5 ; 
-autocannon -c 1024 -t30 -p 10 -j http://localhost:8000/ >> results-pipeline.txt
-pkill -f rawnodeserver ;
+echo node >> results-plain.txt ;
+node plainserver.js & sleep 5 ; 
+autocannon -c 1024 -t30 -p 10 -j http://localhost:8000/ >> results-plain.txt
+pkill -f plainserver ;
 sleep 5
 
 echo merapi >> results-pipeline.txt ;

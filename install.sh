@@ -1,3 +1,4 @@
+npm i autocannon -g
 npm install express
 npm install n
 npm install moleculer-cli -g
