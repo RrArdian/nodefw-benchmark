@@ -28,6 +28,6 @@ sleep 5
 
 echo nestjs >> results-plain.txt ;
 cd nestjs ;
-npm run start & sleep 5 ;
+node index.js & sleep 5 ;
 cd ..; 
 autocannon -c 1024 -t30 -j http://localhost:3030 >> results-plain.txt
