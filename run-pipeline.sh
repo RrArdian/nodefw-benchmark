@@ -1,12 +1,12 @@
-echo express >> results-plain.txt ;
+echo express >> results-pipeline.txt ;
 node express.js &
-autocannon -c 1024 -t30 -p 10 -j http://localhost:8090 >> results-plain.txt
+autocannon -c 1024 -t30 -p 10 -j http://localhost:8090 >> results-pipeline.txt
 pkill -f express ;
 sleep 5
 
-echo node >> results-plain.txt ;
+echo node >> results-pipeline.txt ;
 node plainserver.js & sleep 5 ; 
-autocannon -c 1024 -t30 -p 10 -j http://localhost:8000/ >> results-plain.txt
+autocannon -c 1024 -t30 -p 10 -j http://localhost:8000/ >> results-pipeline.txt
 pkill -f plainserver ;
 sleep 5
 
@@ -22,7 +22,7 @@ echo molecular >> results-pipeline.txt ;
 cd molecular ;
 npm run dev & sleep 5 ;
 cd ..; 
-autocannon -c 1024 -t30 -p 10 -j http://localhost:3000/greeter/hello >> results-pipeline.txt
+autocannon -c 1024 -t30 -p 10 -j http://localhost:3030/greeter/hello >> results-pipeline.txt
 pkill -f molecular
 sleep 5
 

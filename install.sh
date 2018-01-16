@@ -10,6 +10,6 @@ cd ..
 cd merapi
 npm install
 cd ..
-cd moleculer
+cd molecular
 npm install
 cd ..
