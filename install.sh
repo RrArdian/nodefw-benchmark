@@ -2,7 +2,7 @@ npm install express
 npm install n
 npm install moleculer-cli -g
 git clone https://github.com/nestjs/javascript-starter.git nestjs
-cd project
+cd nestjs
 npm install
 cd ..
 cd merapi
