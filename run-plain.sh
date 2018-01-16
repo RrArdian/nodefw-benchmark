@@ -22,7 +22,7 @@ echo molecular >> results-plain.txt ;
 cd molecular ;
 npm run dev & sleep 5 ;
 cd ..; 
-autocannon -c 1024 -t30 -j http://localhost:3000/greeter/hello >> results-plain.txt
+autocannon -c 1024 -t30 -j http://localhost:3030/greeter/hello >> results-plain.txt
 pkill -f molecular
 sleep 5
 
