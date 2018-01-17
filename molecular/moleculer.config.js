@@ -4,7 +4,7 @@ module.exports = {
 	namespace: "dev",
 	nodeID: null,
 
-	logger: true,
+	logger: false,
 	logLevel: "info",
 	logFormatter: "default",
 
