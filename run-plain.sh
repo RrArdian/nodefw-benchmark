@@ -27,7 +27,7 @@ kill -9 $(lsof -t -i:3030 -sTCP:LISTEN)
 sleep 5
 
 echo loopback 2 >> results-plain.txt
-cd loopback
+cd loopback2
 node . & sleep 5
 cd ..
 autocannon -c 1024 -t30 -j http://localhost:3040 >> results-plain.txt
@@ -35,7 +35,7 @@ kill -9 $(lsof -t -i:3040 -sTCP:LISTEN)
 sleep 5
 
 echo loopback 3 >> results-plain.txt
-cd loopbacknew
+cd loopback3
 node . & sleep 5
 cd ..
 autocannon -c 1024 -t30 -j http://localhost:3050 >> results-plain.txt
