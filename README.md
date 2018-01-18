@@ -1,5 +1,4 @@
 # nodefw-benchmark
-NodeJS Framework Benchmark
 Benchmarking several NodeJS framework using [Autocannon](https://gitter.im/mcollina/autocannon)
 
 ## Install
@@ -10,7 +9,7 @@ npm i autocannon -g
 
 After install autocannon run this commands below
 
-### Install all dependencies
+## Install all dependencies
 ```
 npm run install
 ```
