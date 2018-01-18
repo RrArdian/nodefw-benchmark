@@ -43,7 +43,7 @@ kill -9 $(lsof -t -i:3050 -sTCP:LISTEN)
 sleep 5
 
 echo nestjs >> results-plain.txt
-cd kioson
+cd nest
 npm run start:prod & sleep 5
 cd ..
 autocannon -c 1024 -t30 -j http://localhost:3000 >> results-plain.txt
