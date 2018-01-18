@@ -1,0 +1,12 @@
+{
+    "name": "nodefw-benchmark",
+    "version": "1.0.0",
+    "description": "NodeJS Framework Benchmarking",
+    "scripts": {
+        "install": "sh install.sh",
+        "plain": "sh run-plain.sh",
+        "pipeline": "sh run-pipeline.sh"
+    },
+    "author": "RrArdian",
+    "license": "ISC"
+}
