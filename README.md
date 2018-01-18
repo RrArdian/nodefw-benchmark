@@ -2,12 +2,12 @@
 Benchmarking several NodeJS framework using [Autocannon](https://gitter.im/mcollina/autocannon)
 
 ## Install
-First, you have to install autocannon for testing. Install autocannon as global.
+First, install autocannon library for testing. Install autocannon as global.
 ```
 npm i autocannon -g
 ```
 
-After install autocannon run this commands below
+After install autocannon run these commands below.
 
 ## Install all dependencies
 ```
@@ -18,10 +18,10 @@ npm run install
 ```
 npm run plain
 ```
-Those command will generate results-plain.txt for report.
+It will generate results-plain.txt for report.
 
 ## Run Testing with Pipeline
 ```
 npm run pipeline
 ```
-Those command will generate results-plipeline.txt for report.
+It command will generate results-plipeline.txt for report.
