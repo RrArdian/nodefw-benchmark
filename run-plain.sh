@@ -49,3 +49,19 @@ cd ..
 autocannon -c 1024 -t30 -j http://localhost:3000 >> results-plain.txt
 kill -9 $(lsof -t -i:3000 -sTCP:LISTEN)
 sleep 5
+
+echo featherjs >> results-plain.txt
+cd featherjs
+npm run start & sleep 5
+cd ..
+autocannon -c 1024 -t30 -j http://localhost:3060 >> results-plain.txt
+kill -9 $(lsof -t -i:3060 -sTCP:LISTEN)
+sleep 5
+
+echo koa >> results-plain.txt
+cd koa
+npm run start & sleep 5
+cd ..
+autocannon -c 1024 -t30 -j http://localhost:3070 >> results-plain.txt
+kill -9 $(lsof -t -i:3070 -sTCP:LISTEN)
+sleep 5

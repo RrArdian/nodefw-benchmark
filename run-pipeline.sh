@@ -35,7 +35,7 @@ kill -9 $(lsof -t -i:3040 -sTCP:LISTEN)
 sleep 5
 
 echo loopback 3 >> results-pipeline.txt
-cd loopbac3
+cd loopback3
 node . & sleep 5
 cd ..
 autocannon -c 1024 -t30 -p 10 -j http://localhost:3050 >> results-pipeline.txt
@@ -48,4 +48,21 @@ npm run start:prod & sleep 5
 cd ..
 autocannon -c 1024 -t30 -p 10 -j http://localhost:3000 >> results-pipeline.txt
 kill -9 $(lsof -t -i:3000 -sTCP:LISTEN)
+sleep 5
+
+
+echo featherjs >> results-pipeline.txt
+cd featherjs
+npm run start & sleep 5
+cd ..
+autocannon -c 1024 -t30 -p 10 -j http://localhost:3060 >> results-pipeline.txt
+kill -9 $(lsof -t -i:3060 -sTCP:LISTEN)
+sleep 5
+
+echo koa >> results-pipeline.txt
+cd koa
+npm run start & sleep 5
+cd ..
+autocannon -c 1024 -t30 -p 10 -j http://localhost:3070 >> results-pipeline.txt
+kill -9 $(lsof -t -i:3070 -sTCP:LISTEN)
 sleep 5
