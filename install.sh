@@ -16,4 +16,10 @@ cd ..
 cd loopback3
 npm install
 cd ..
+cd featherjs
+npm install
+cd ..
+cd koa
+npm install
+cd ..
 echo "Installation done!"
